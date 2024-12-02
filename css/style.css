@@ -1,3 +1,131 @@
-body {
-    background-color: aqua;
+.loader {
+    margin: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.loader img {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: #3498db; /* You can change the background color */
+    animation: bounce 8s infinite alternate;
+}
+
+.loader img:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.loader img:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.loader img:nth-child(4) {
+    animation-delay: 6s;
+}
+
+@keyframes bounce {
+    to {
+        width: 50px; 
+        height: 50px;
+        transform: rotate(360deg) scale(1.5) translate3d(0, -50px, 0);
+    }
+}
+.loader1 {
+    margin: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.loader1 img {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: #3498db; /* You can change the background color */
+    animation: bounce 8s infinite alternate;
+}
+
+.loader1 img:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.loader1 img:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.loader1 img:nth-child(4) {
+    animation-delay: 6s;
+}
+
+@keyframes bounce {
+    to {
+        width: 50px; 
+        height: 50px;
+        transform: rotate(360deg) scale(1.5) translate(0, -50px, 0);
+    }
+}
+.loader1 img {
+    background-color: #3498db; 
+    width: 100px; 
+    height: 100px;
+    border-radius: 0;
+    transition: background-color 3s, border-radius 3s; 
+}
+
+.loader1 img:hover {
+    background-color: black; 
+    border-radius: 50%; 
+}
+
+.unique-animation {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%; /* Makes it a circle */
+    position: absolute; /* To animate the position */
+    top: 50%;
+    left: 50%;
+    animation: bounceAndSpin 5s ease-in-out infinite, colorChange 5s infinite alternate;
+}
+
+/* Keyframe animation to bounce and spin */
+@keyframes bounceAndSpin {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg); /* Start position */
+    }
+    25% {
+        transform: translate(-50%, -70%) scale(1.2) rotate(90deg); /* Bounce up and scale */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1) rotate(180deg); /* Go back down */
+    }
+    75% {
+        transform: translate(-50%, -30%) scale(1.2) rotate(270deg); /* Bounce up again */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(360deg); /* Return to start */
+    }
+}
+
+/* Keyframe animation to change the color */
+@keyframes colorChange {
+    0% {
+        background-color: #3498db; /* Initial color */
+    }
+    25% {
+        background-color: #e74c3c; /* Red */
+    }
+    50% {
+        background-color: #f39c12; /* Yellow */
+    }
+    75% {
+        background-color: #2ecc71; /* Green */
+    }
+    100% {
+        background-color: #3498db; /* Back to Blue */
+    }
 }
